@@ -1,7 +1,7 @@
 {
   "name": "ManUp! JS, the Manifest Polyfill",
   "short_name": "ManUP! JS",
-  "start_url": "https://rhg-wpa-windows-v2b.azurewebsites.net",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "landscape",
   "icons": [
