@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ManUp.js Page Title</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #80ff80;
+            color: black;
+        }
+
+        h1 {
+            font-family: 'Allerta Stencil', sans-serif;
+            font-weight: 400;
+            font-size: 300%;
+        }
+
+        h2,
+        p {
+            font-family: aria, sans-serif;
+            font-size: 150%;
+        }
+    </style>
+    <script>
+        if (navigator.serviceWorker.controller) {
+          console.log('[PWA Builder] active service worker found, no need to register')
+        } else {
+        
+        //Register the ServiceWorker
+          navigator.serviceWorker.register('pwabuilder-sw.js', {
+            scope: './'
+          }).then(function(reg) {
+            console.log('Service worker has been registered for scope:'+ reg.scope);
+          });
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>MAN<br />UP<br />.JS</h1>
+    <h2>It's finally here... the polyfill you've been waiting for</h2>
+    
+    <script src="manup.js"></script>
+    
+</body>
+
+</html>
